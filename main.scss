@@ -49,18 +49,24 @@ header,.reserv{
       margin: 0 auto 15px;
       padding-top:($fct-div__height/2);
       text-align:center;
-
     }
 }
 .resto{
  @include position(absolute, $top:36.4em, $left:0, $right:0);
-  height:47%;
+  height:59em;
   background-color: map-get($color, color2);
   border:1px red solid;
+  div{
+    height: 12.5em;
+    width:80%;
+    border:blue 1px solid;
+    border-radius:15px;
+    margin:0 auto 15px; 
+  }
 }
 footer{
   height: 20%;
-  margin-bottom: -20em;
+  margin-bottom: -55em;
   background-color:map-get($color,color1);
   color:map-get($color,clr);
   @include position(absolute, $bottom:0, $left:0, $right:0);
