@@ -1,0 +1,73 @@
+$fct-div__height: 10%;
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+$color:(color1:#353535, color2:#f6f6f6, color3:#eaeaea, clr:#fff);
+body{
+  font-size:1em; /*créer une map ou un variable*/
+  font-family: "robotoregular";
+  display:flex;
+  flex-direction:column;
+}
+header,.reserv{
+  text-align:center;
+}
+.reserv{
+  @include position(absolute, $top:5em, $left:0, $right:0);
+  background-color:map-get($color, color2);
+  height:11em;
+  div{
+    padding: 10px 0;
+    background-color: map-get($color,color3);
+  }
+  button{
+    background:#e671da;/*Couleur provisoire*/
+    height:18%;
+    border-radius:2em;
+    border:transparent;
+    color: map-get($color, clr);
+    font-size:1em;
+
+  }
+}
+.fct{
+  @include position(absolute, $top:16em, $left:0, $right:0);
+  height:40%;
+  border:1px red solid; 
+    div{
+      border:1px solid blue;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px #adaaad;
+      background-color: map-get($color,color2);
+      font-weight: bold;
+      height: $fct-div__height;
+      width:80%;
+      margin: 0 auto 15px;
+      padding-top:($fct-div__height/2);
+      text-align:center;
+
+    }
+}
+.resto{
+ @include position(absolute, $top:36.4em, $left:0, $right:0);
+  height:47%;
+  background-color: map-get($color, color2);
+  border:1px red solid;
+}
+footer{
+  height: 20%;
+  margin-bottom: -20em;
+  background-color:map-get($color,color1);
+  color:map-get($color,clr);
+  @include position(absolute, $bottom:0, $left:0, $right:0);
+  h3{
+    margin-left: 10%;
+  }
+  li{
+    list-style:none;
+  }
+}
