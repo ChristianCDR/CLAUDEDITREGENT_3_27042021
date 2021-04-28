@@ -1,5 +1,5 @@
 $fct-div__height: 10%;
-@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+@mixin position($position:null, $top: null, $right: null, $bottom: null, $left: null) {
   position: $position;
   top: $top;
   right: $right;
@@ -36,8 +36,8 @@ header,.reserv{
 }
 .fct{
   @include position(absolute, $top:16em, $left:0, $right:0);
-  height:40%;
-  border:1px red solid; 
+  height:20em;
+  border:1px red solid;
     div{
       border:1px solid blue;
       border-radius: 15px;
@@ -52,27 +52,44 @@ header,.reserv{
     }
 }
 .resto{
- @include position(absolute, $top:36.4em, $left:0, $right:0);
-  height:59em;
+ @include position(absolute, $top:36em, $left:0, $right:0);
+  height:70em;
   background-color: map-get($color, color2);
   border:1px red solid;
   div{
-    height: 12.5em;
-    width:80%;
-    border:blue 1px solid;
+    height:14.5em;
+    width:18em;
+    border:blue 1px solid; /*width:335px height: 175px*/
     border-radius:15px;
     margin:0 auto 15px; 
   }
+  .resto__div{
+    background: url("resto1-a.jpg") no-repeat;
+  }
+  :nth-child(3){
+    background: url("resto2-a.jpg") no-repeat;
+  }
+  :nth-child(4){
+    background: url("resto3-a.jpg") no-repeat;
+  }
+  :nth-child(5){
+    background: url("resto4-a.jpg") no-repeat;
+  }
+  p,span{
+    @include position(relative, $left:0.5em);
+  }
+  p{
+    @include position($top:10.5em);
+  }
+  span{
+    @include position($top:10em);
+  }
 }
 footer{
-  height: 20%;
-  margin-bottom: -55em;
+  height: 10em;
   background-color:map-get($color,color1);
   color:map-get($color,clr);
-  @include position(absolute, $bottom:0, $left:0, $right:0);
-  h3{
-    margin-left: 10%;
-  }
+  @include position(absolute, $bottom:-75em, $left:0, $right:0);
   li{
     list-style:none;
   }
