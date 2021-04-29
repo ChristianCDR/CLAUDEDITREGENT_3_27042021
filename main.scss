@@ -24,13 +24,17 @@ h3{
 .reserv{
   @include position(absolute, $top:5em, $left:0, $right:0);
   background-color:map-get($color, color2);
-  height:13em;
+  height:17em;
   div{
     padding: 10px 0;
     background-color: map-get($color,color3);
   }
+  .fa-map-marker-alt{
+    margin-right: 1em;
+  }
   span{
     font-weight: bold;
+    font-size: 1.5em;
   }
   button{
     background:#e671da;/*Couleur provisoire*/
@@ -42,7 +46,7 @@ h3{
   }
 }
 .fct{
-  @include position(absolute, $top:18em, $left:0, $right:0);
+  @include position(absolute, $top:22em, $left:0, $right:0);
   height:17em;
   padding-top:1em;
     div{
@@ -56,9 +60,20 @@ h3{
       padding-top:($fct-div__height/2);
       text-align:center;
     }
+    .fa-mobile-alt{
+      font-size:1.3em;
+      @include position(relative, $right: 0.8em );
+      margin-right: 0.9em;
+    }
+    .fa-list-ul{
+      @include position(relative, $right: 2em );
+    }
+    .fa-store{
+      @include position(relative, $right: 1.7em );
+    }
 }
 .resto{
-  @include position(absolute, $top:36em, $left:0, $right:0);
+  @include position(absolute, $top:40em, $left:0, $right:0);
   height:70em;
   background-color: map-get($color, color2);
   padding-top:1em;
@@ -96,12 +111,13 @@ h3{
     @include position(absolute, $right:1.5em);
     padding-top: 0.2em;
   }
+  border:1px solid green;
 }
 footer{
   height: 10em;
   background-color:map-get($color,color1);
   color:map-get($color,clr);
-  @include position(absolute, $bottom:-74em, $left:0, $right:0);
+  @include position(absolute, $bottom:-78em, $left:0, $right:0);
   div{
   margin:  0 auto;
   width:18em;
