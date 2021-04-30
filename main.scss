@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'shrikhandregular';
+  src: url('police/shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+       url('police/shrikhand/shrikhand-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url('police/roboto/roboto-regular-webfont.woff2') format('woff2'),
+       url('police/roboto/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 $fct-div__height: 2em;
 $box-shadow: 0 2px 10px #7f8182;
 @mixin position($position:null, $top: null, $right: null, $bottom: null, $left: null) {
@@ -7,14 +21,16 @@ $box-shadow: 0 2px 10px #7f8182;
   bottom: $bottom;
   left: $left;
 }
-
 $color:(color1:#353535, color2:#f6f6f6, color3:#eaeaea, clr:#fff);
 body{
   font-size:1em; /*créer une map ou un variable*/
-  font-family: "robotoregular";
+  font-family: arial;
   display:flex;
   flex-direction:column;
   min-height:100%;
+}
+header, footer h3{
+  font-family: "shrikhandregular";
 }
 header,.reserv{
   text-align:center;
@@ -37,7 +53,7 @@ h3{
     margin-right: 1em;
   }
   button{
-    background:#e671da;/*Couleur provisoire*/
+    background:linear-gradient(to top left,#9356dc, #FF79DA);
     height:18%;
     border-radius:2em;
     border:transparent;
@@ -59,7 +75,7 @@ h3{
       width:18em;
       margin: 0 auto 15px;
       padding-top:($fct-div__height/2);
-      text-align:center;
+      text-align: center;
     }
     span{
       display:inline-block;
@@ -68,15 +84,9 @@ h3{
       color:white;
       background-color: #9356dc;
     }
-    .fct__1{
-      @include position(relative, $right: 2.5em );
-    }
-    .fct__2{
-      @include position(relative, $right: 3.5em );
-    }
-    .fct__3{
-      @include position(relative,$right:3.2em );
-    }
+    i{
+      color:#7e7e7e;
+    }   
 }
 .fa-mobile-alt{
   font-size:1.3em;
@@ -88,6 +98,15 @@ h3{
 }
 .fa-store{
   @include position(relative, $right: 1.7em );
+}
+.fct__1{
+  @include position(relative, $right: 1.7em );
+}
+.fct__2{
+  @include position(relative, $right: 2.9em );
+}
+.fct__3{
+  @include position(relative,$right:2.5em );
 }
 .resto{
   @include position(absolute, $top:40em, $left:0, $right:0);
@@ -144,7 +163,7 @@ h3{
   }
   .resto__menil__nouveau, .resto__charonne__nouveau{
         background-color: #99e2d0;
-        color:#0a8c6d;
+        color:darken(#99e2d0, 35%);
         font-size:1em;
         height:1em;
         width:7em;
@@ -174,3 +193,5 @@ footer{
 .fa-hands-helping{
   font-size: 0.8em;
 }
+/*Fin Accueil*/
+/*Menu 1*/
