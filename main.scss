@@ -3,7 +3,7 @@
   src: url('police/shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
        url('police/shrikhand/shrikhand-regular-webfont.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
+  font-style:normal;
 }
 @font-face {
   font-family: 'robotoregular';
@@ -27,10 +27,9 @@ a{
 $color:(color1:#353535, color2:#f6f6f6, color3:#eaeaea, clr:#fff);
 body{
   font-size:1em; /*créer une map ou un variable*/
-  font-family: arial;
+  font-family: "robotoregular",arial, sans-serif;
   display:flex;
   flex-direction:column;
-  min-height:100%;
 }
 header, footer h3{
   font-family: "shrikhandregular";
@@ -202,5 +201,3 @@ footer{
 .fa-hands-helping{
   font-size: 0.8em;
 }
-/*Fin Accueil*/
-/*Menu 1*/
