@@ -1,0 +1,23 @@
+footer{
+  height: 10em;
+  background-color:map-get($color,color1);
+  color:map-get($color,clr);
+  @include position(absolute,$top:110em,$bottom:0, $left:0, $right:0);
+  div{
+  margin:  0 auto;
+  width:18em;
+  }
+  li{
+    list-style:none;
+    @include position(relative, $left:-2.3em);
+  }
+  i{
+    margin-right: 0.8em;
+  }
+  a{
+    color:#fff;
+  }
+}
+.fa-hands-helping{
+  font-size: 0.8em;
+}

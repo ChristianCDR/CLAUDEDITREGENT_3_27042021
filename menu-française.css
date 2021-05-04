@@ -11,20 +11,18 @@
   font-weight: normal;
   font-style: normal;
 }
-a {
-  text-decoration: none;
-}
-
 body {
   font-size: 1em;
   /*créer une map ou un variable*/
   font-family: "robotoregular", arial, sans-serif;
-  display: flex;
-  flex-direction: column;
 }
 
 header, footer h3 {
-  font-family: "shrikhandregular";
+  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 footer {
