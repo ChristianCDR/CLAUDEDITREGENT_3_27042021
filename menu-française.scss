@@ -4,4 +4,75 @@
 @import "Utils/variables";
 @import "Utils/list";
 @import "Utils/mixin";
+@import "Components/buttons";
 @import "Layouts/footer";
+
+
+header{
+  text-align: center;
+  font-size:5vw;
+}
+.fa-arrow-left{
+  text-align:left;
+  @include position(absolute, $left:1em);
+  font-size:5vw;
+}
+header + div{
+  background: url("images_resto/bg-menu-fr.jpg") no-repeat;
+  height: 74vw;
+  @include position(absolute, $left:0, $right:0);
+  background-size: 100% ;
+}
+section{
+  @include position(absolute,$top:85vw, $left:0, $right:0);
+  height:85em;
+  border-radius: 10vw 10vw 0 0;
+  background-color:map-get($color, color2);
+  font-size: 4vw;
+
+  h2, span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h2{
+    font-family: 'shrikhandregular',Arial, Helvetica, sans-serif;
+    padding:0 10% 0 10%;
+  }
+  
+  div{
+    width: 90%;
+    margin:20px auto;
+    padding:0.5% 0 5% 0;
+    border-radius: 0.7em;
+    background-color: map-get($color, clr);
+  }
+  h3{
+    margin-left: 5%;
+    width:12%;
+    border-bottom: 2px solid map-get($color, color4);;
+    text-transform: uppercase;
+  }
+  p{
+    margin-bottom: 0;
+  }
+  p,.prix{
+    font-weight: bold;
+    padding:0 5%;
+  }
+  span{
+    padding-left: 5%;
+  }
+}
+button{
+display: block;
+height:12vw;
+margin:4em auto;
+width:50%;
+} 
+footer{
+  @include position(absolute, $top: 425vw);
+  height:35vw;
+  font-size: 3.6vw;
+}
