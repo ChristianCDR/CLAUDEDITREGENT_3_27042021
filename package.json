@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch main.scss:style.css menu-française.scss:menu-française.css"
+    "sass": "sass --watch main.scss:style.css menu-française.scss:menu-française.css style-desktop.scss:style-desktop.css"
    
   },
   "author": "",
