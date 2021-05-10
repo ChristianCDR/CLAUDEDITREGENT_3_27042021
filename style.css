@@ -133,7 +133,7 @@ h3 {
   background-color: #f6f6f6;
   padding-top: 1em;
 }
-.resto a {
+.resto div {
   display: block;
   height: 14.5em;
   width: 18em;
@@ -142,16 +142,16 @@ h3 {
   margin: 0 auto 15px;
 }
 .resto .resto__menil {
-  background: url("") no-repeat;
+  background: url("images_resto/resto-1.jpg") no-repeat;
 }
 .resto .resto__charonne {
-  background: url("") no-repeat;
+  background: url("images_resto/resto-2.jpg") no-repeat;
 }
 .resto .resto__cite {
-  background: url("") no-repeat;
+  background: url("images_resto/resto-3.jpg") no-repeat;
 }
 .resto .resto__folie {
-  background: url("") no-repeat;
+  background: url("images_resto/resto-4.jpg") no-repeat;
 }
 .resto p, .resto span {
   position: relative;
@@ -178,7 +178,7 @@ h3 {
 .resto .resto__menil__nouveau, .resto .resto__charonne__nouveau {
   position: relative;
   top: 1em;
-  left: 10em;
+  left: 4.5em;
   background-color: #99e2d0;
   color: #2c9c81;
   font-size: 1em;
@@ -193,7 +193,7 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
-  .fct, .container {
+  .fct, .resto {
     display: flex;
   }
 
@@ -207,24 +207,39 @@ h3 {
     left: 3em;
   }
 
-  .container {
+  .resto {
+    flex-direction: row;
     justify-content: space-around;
+    border: 1px solid green;
   }
-  .container a {
+  .resto div {
     height: 50em;
     width: 22em;
     margin-top: 5em;
+    border: 1px solid purple;
   }
-  .container .resto__menil__nouveau, .container .resto__charonne__nouveau {
+  .resto .resto__menil {
+    background: url("images_resto/resto-1-desktop.jpg") no-repeat;
+  }
+  .resto .resto__charonne {
+    background: url("images_resto/resto-2-desktop.jpg") no-repeat;
+  }
+  .resto .resto__cite {
+    background: url("images_resto/resto-3-desktop.jpg") no-repeat;
+  }
+  .resto .resto__folie {
+    background: url("images_resto/resto-4-desktop.jpg") no-repeat;
+  }
+  .resto .resto__menil__nouveau, .resto .resto__charonne__nouveau {
     position: relative;
-    top: 1em;
-    left: 14em;
+    top: 0em;
+    left: 6em;
   }
-  .container p, .container span {
+  .resto p, .resto span {
     top: 44em;
   }
-  .container .resto__menil p, .container .resto__menil span, .container .resto__charonne p, .container .resto__charonne span {
-    top: 42em;
+  .resto .resto__menil p, .resto .resto__menil span, .resto .resto__charonne p, .resto .resto__charonne span {
+    top: 37em;
   }
 }
 footer {

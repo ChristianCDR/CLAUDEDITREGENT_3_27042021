@@ -70,7 +70,7 @@ h3{
   height:70em;
   background-color: map-get($color, color2);
   padding-top:1em;
-  a{
+  div{
     display:block;
     height:14.5em;
     width:18em;
@@ -79,16 +79,16 @@ h3{
     margin:0 auto 15px; 
   }
   .resto__menil{
-    background: url("") no-repeat;
+    background: url("images_resto/resto-1.jpg") no-repeat;
   }
   .resto__charonne{
-    background: url("") no-repeat;
+    background: url("images_resto/resto-2.jpg") no-repeat;
   }
   .resto__cite{
-    background: url("") no-repeat;
+    background: url("images_resto/resto-3.jpg") no-repeat;
   }
   .resto__folie{
-    background: url("") no-repeat;
+    background: url("images_resto/resto-4.jpg") no-repeat;
   }
   p,span{
     @include position(relative, $left:0.5em);
@@ -113,7 +113,7 @@ h3{
     }
   }
   .resto__menil__nouveau, .resto__charonne__nouveau{
-        @include position(relative,$top:1em, $left:10em);
+        @include position(relative,$top:1em, $left:4.5em);
         background-color: #99e2d0;
         color:darken(#99e2d0, 35%);
         font-size:1em;
@@ -128,7 +128,7 @@ h3{
   } 
 }
 @media screen and (min-width:1024px){
-  .fct, .container{
+  .fct, .resto{
     display: flex;
   }
   .fct{
@@ -137,22 +137,39 @@ h3{
   .fct h3, .resto h3{
     @include position(absolute, $left:3em ,$top:0);
   }
-  .container{
+  .resto{
+    flex-direction: row;
     justify-content: space-around;
-    a{
+    border: 1px solid green;
+    
+    div{
       height: 50em;
       width: 22em;
       margin-top: 5em;
+      border: 1px solid purple;
+    }
+    .resto__menil{
+      background: url("images_resto/resto-1-desktop.jpg") no-repeat;
+    }
+    .resto__charonne{
+      background: url("images_resto/resto-2-desktop.jpg") no-repeat;
+    }
+    .resto__cite{
+      background: url("images_resto/resto-3-desktop.jpg") no-repeat;
+    }
+    .resto__folie{
+      background: url("images_resto/resto-4-desktop.jpg") no-repeat;
     }
     .resto__menil__nouveau, .resto__charonne__nouveau{
-      @include position(relative, $top:1em, $left:14em);
+      
+      @include position(relative, $top:0em, $left:6em);
     }
     p,span{
       @include position($top:44em);
     }
     .resto__menil,.resto__charonne{
       p,span{
-        @include position($top:42em);
+        @include position($top:37em);
       }
     }
   }
