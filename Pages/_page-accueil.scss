@@ -128,7 +128,7 @@ h3{
   } 
 }
 
-@media screen and (min-width:767px)and (max-width:1023px){
+@media screen and (min-width:768px)and (max-width:1024px){
 .fct{
   display: flex;
   flex-direction: column;
@@ -148,7 +148,6 @@ h3{
   .resto__menil{
     background: url("images_resto/resto-1-desktop.jpg") no-repeat;
     @include position(absolute,$left:2vw);
-    
   }
   .resto__charonne{
     background: url("images_resto/resto-2-desktop.jpg") no-repeat;
@@ -162,9 +161,8 @@ h3{
     background: url("images_resto/resto-4-desktop.jpg") no-repeat;
     @include position(absolute, $top:55em, $right:2vw);
   }
-  &__menil__nouveau, &__charonne__nouveau{
-    
-    @include position(relative, $top:0em, $left:6em);
+  .resto__menil__nouveau, .resto__charonne__nouveau{
+    @include position(relative, $top:0em, $left:30%);
   }
   p,span{
     @include position($top:44em);
@@ -180,7 +178,7 @@ footer{
 }
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1025px){
   .fct, .resto{
     display: flex;
   }
@@ -196,7 +194,7 @@ footer{
     
     div{
       height: 50em;
-      width: 22em;
+      width: 22%;
       margin-top: 5em;
     }
     .resto__menil{
@@ -212,8 +210,7 @@ footer{
       background: url("images_resto/resto-4-desktop.jpg") no-repeat;
     }
     .resto__menil__nouveau, .resto__charonne__nouveau{
-      
-      @include position(relative, $top:0em, $left:6em);
+      @include position(relative, $top:0em, $left:20%);
     }
     p,span{
       @include position($top:44em);

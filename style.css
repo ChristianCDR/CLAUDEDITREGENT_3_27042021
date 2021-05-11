@@ -222,7 +222,7 @@ h3 {
   color: #000;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .fct {
     display: flex;
     flex-direction: column;
@@ -266,10 +266,10 @@ h3 {
     top: 55em;
     right: 2vw;
   }
-  .resto__menil__nouveau, .resto__charonne__nouveau {
+  .resto .resto__menil__nouveau, .resto .resto__charonne__nouveau {
     position: relative;
     top: 0em;
-    left: 6em;
+    left: 30%;
   }
   .resto p, .resto span {
     top: 44em;
@@ -286,7 +286,7 @@ h3 {
     left: 0;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .fct, .resto {
     display: flex;
   }
@@ -307,7 +307,7 @@ h3 {
   }
   .resto div {
     height: 50em;
-    width: 22em;
+    width: 22%;
     margin-top: 5em;
   }
   .resto .resto__menil {
@@ -325,7 +325,7 @@ h3 {
   .resto .resto__menil__nouveau, .resto .resto__charonne__nouveau {
     position: relative;
     top: 0em;
-    left: 6em;
+    left: 20%;
   }
   .resto p, .resto span {
     top: 44em;
