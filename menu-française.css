@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @font-face {
   font-family: "shrikhandregular";
-  src: url("police/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("police/shrikhand/shrikhand-regular-webfont.woff") format("woff");
+  src: url("Police/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("Police/shrikhand/shrikhand-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "robotoregular";
-  src: url("police/roboto/roboto-regular-webfont.woff2") format("woff2"), url("police/roboto/roboto-regular-webfont.woff") format("woff");
+  src: url("Police/roboto/roboto-regular-webfont.woff2") format("woff2"), url("Police/roboto/roboto-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -65,67 +65,71 @@ footer a {
   font-size: 0.8em;
 }
 
+body {
+  margin: auto;
+}
+
 header {
   text-align: center;
-  font-size: 5vw;
+  font-size: 1em;
 }
 
 .fa-arrow-left {
   text-align: left;
   position: absolute;
   left: 1em;
-  font-size: 5vw;
+  font-size: 0.5em;
 }
 
 header + div {
-  background: url("images_resto/bg-menu-fr.jpg") no-repeat;
+  background: url("images_resto/bg-fr-mob.jpg") no-repeat;
   height: 74vw;
   position: absolute;
   right: 0;
   left: 0;
-  background-size: 100%;
+  background-size: contain;
 }
 
-section {
-  position: absolute;
-  top: 85vw;
-  right: 0;
-  left: 0;
-  height: 85em;
+.main-section {
+  position: relative;
+  top: 55vw;
   border-radius: 10vw 10vw 0 0;
   background-color: #f6f6f6;
-  font-size: 4vw;
+  font-size: 3vw;
+  height: auto;
+  padding-top: 2em;
+  padding-bottom: 3em;
 }
-section h2, section span {
+.main-section h2, .main-section span {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-section h2 {
+.main-section h2 {
   font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
-  padding: 0 10% 0 10%;
+  padding: 0 10% 0 5%;
 }
-section div {
+.main-section .entrees div, .main-section .plats div, .main-section .desserts div {
   width: 90%;
   margin: 20px auto;
   padding: 0.5% 0 5% 0;
   border-radius: 0.7em;
   background-color: #fff;
 }
-section h3 {
+.main-section h3 {
   margin-left: 5%;
   width: 12%;
   border-bottom: 2px solid #99e2d0;
   text-transform: uppercase;
 }
-section p {
+.main-section p {
   margin-bottom: 0;
 }
-section p, section .prix {
+.main-section p, .main-section .prix {
   font-weight: bold;
   padding: 0 5%;
 }
-section span {
+.main-section span {
   padding-left: 5%;
 }
 
@@ -137,29 +141,61 @@ button {
 }
 
 footer {
-  position: absolute;
-  top: 425vw;
-  height: 40vw;
-  font-size: 3.6vw;
-}
-footer h3 {
-  border: goldenrod 1px solid;
-}
-footer ul {
-  border: 1px solid red;
-  width: 15em;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-footer li {
   position: relative;
-  left: -3em;
-  display: block;
-  border: 1px solid red;
+  top: 53vw;
+  padding-top: 1%;
 }
-footer div {
-  border: goldenrod 1px solid;
+
+@media screen and (min-width: 1025px) {
+  header + div {
+    background: url("images_resto/toa-heftiba-DQKerTsQwi0-unsplash-1.jpg") no-repeat;
+    height: 35em;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .main-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 32em;
+    border-radius: 4em 4em 0 0;
+    font-size: 1em;
+  }
+  .main-section h2 {
+    padding: 0 1.5em 0 1em;
+  }
+
+  .main-section__container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .main-section__container section {
+    width: 40%;
+  }
+  .main-section__container div {
+    height: 3.5em;
+  }
+  .main-section__container .plats span {
+    font-size: 90%;
+  }
+  .main-section__container .plats span span {
+    font-size: 1.1em;
+  }
+
+  button {
+    width: 15em;
+    height: 5em;
+    border-radius: 10em;
+    font-weight: bold;
+  }
+
+  footer {
+    position: relative;
+    top: 32em;
+  }
 }
 
 /*# sourceMappingURL=menu-fran%C3%A7aise.css.map */

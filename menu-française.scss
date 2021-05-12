@@ -7,27 +7,32 @@
 @import "Components/buttons";
 @import "Layouts/footer";
 
+body{
+  margin:auto;
+}
 header{
   text-align: center;
-  font-size:5vw;
+  font-size:1em;
 }
 .fa-arrow-left{
   text-align:left;
   @include position(absolute, $left:1em);
-  font-size:5vw;
+  font-size:0.5em;
 }
 header + div{
-  background: url("images_resto/bg-menu-fr.jpg") no-repeat;
+  background: url("images_resto/bg-fr-mob.jpg") no-repeat;
   height: 74vw;
   @include position(absolute, $left:0, $right:0);
-  background-size: 100% ;
+  background-size: contain;
 }
-section{
-  @include position(absolute,$top:85vw, $left:0, $right:0);
-  height:85em;
+.main-section{
+  @include position(relative,$top:55vw);
   border-radius: 10vw 10vw 0 0;
   background-color:map-get($color, color2);
-  font-size: 4vw;
+  font-size: 3vw;
+  height:auto;
+  padding-top:2em ;
+  padding-bottom: 3em;
 
   h2, span{
     display: flex;
@@ -37,10 +42,9 @@ section{
 
   h2{
     font-family: 'shrikhandregular',Arial, Helvetica, sans-serif;
-    padding:0 10% 0 10%;
+    padding:0 10% 0 5%;
   }
-  
-  div{
+  .entrees div, .plats div, .desserts div{
     width: 90%;
     margin:20px auto;
     padding:0.5% 0 5% 0;
@@ -71,26 +75,50 @@ margin:4em auto;
 width:50%;
 } 
 footer{
-  @include position(absolute, $top: 425vw);
-  height:40vw;
-  font-size: 3.6vw;
-  h3{
-    border: goldenrod 1px solid;
+  @include position(relative,$top:53vw);
+  padding-top: 1%;
+}
+@media screen and (min-width: 1025px){
+  header + div{
+    background: url("images_resto/toa-heftiba-DQKerTsQwi0-unsplash-1.jpg") no-repeat;
+    height: 35em;
+    @include position(absolute, $left:0, $right:0);
+    background-size: cover;
   }
-  ul{
-    border:1px solid red;
-    width:15em;
+  .main-section{
+    max-width:1200px;
+    margin: 0 auto;
+    @include position(relative,$top:32em);
+    border-radius: 4em 4em 0 0;
+    font-size: 1em;
+    h2{
+      padding:0 1.5em 0 1em;
+    }
+  }
+  .main-section__container{
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    justify-content: space-around;
+    section{
+      width:40%;
+    }
+    div{
+      height:3.5em;
+    }
+    .plats span{
+      font-size: 90%;
+      span{
+        font-size: 1.1em;
+      }
+    }
   }
-  li{
-    @include position(relative, $left:-3em);
-    display:block;
-    border:1px solid red;
+  button{
+    width:15em;
+    height:5em;
+    border-radius: 10em;
+    font-weight: bold;
   }
-div{
-  border: goldenrod 1px solid;
+  footer{
+    @include position(relative,$top:32em);
+  }
 }
- 
-}
+
