@@ -126,97 +126,74 @@ h3{
   } 
 }
 
-@media screen and (min-width:768px)and (max-width:1024px){
-.fct{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.fct h3, .resto h3{
-  @include position(absolute, $left:3em ,$top:0);
-}
-.resto{
-  display: flex;
-  flex-direction: row;
-  div{
-    height: 50em;
-    width: 45%;
-    margin-top: 5em;
-  }
-  .resto__menil{
-    background: url("images_resto/resto-1-desktop.jpg") no-repeat;
-    @include position(absolute,$left:2vw);
-  }
-  .resto__charonne{
-    background: url("images_resto/resto-2-desktop.jpg") no-repeat;
-    @include position(absolute, $right:2vw);
-  }
-  .resto__cite{
-    background: url("images_resto/resto-3-desktop.jpg") no-repeat;
-    @include position(absolute, $top:55em, $left:2vw);
-  }
-  .resto__folie{
-    background: url("images_resto/resto-4-desktop.jpg") no-repeat;
-    @include position(absolute, $top:55em, $right:2vw);
-  }
-  .resto__menil__nouveau, .resto__charonne__nouveau{
-    @include position(relative, $top:0em, $left:30%);
-  }
-  h4,p{
-    @include position($top:45em);
-  }
-  .resto__menil,.resto__charonne{
-    h4,p{
-      @include position($top:37em);
-    }
-  }
-}
-footer{
-  @include position(absolute,$top:160em,$bottom:0, $left:0, $right:0);
-}
-}
-
-@media screen and (min-width:1025px){
-  .fct, .resto{
-    display: flex;
-  }
+@media screen and (min-width:768px){
   .fct{
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .fct h3, .resto h3{
     @include position(absolute, $left:3em ,$top:0);
   }
   .resto{
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
     div{
-      height: 50em;
-      width: 22%;
+      height:25em;
+      width: 45%;
       margin-top: 5em;
     }
     .resto__menil{
       background: url("images_resto/resto-1-desktop.jpg") no-repeat;
+      @include position(absolute,$left:2vw);
     }
     .resto__charonne{
       background: url("images_resto/resto-2-desktop.jpg") no-repeat;
+      @include position(absolute, $right:2vw);
     }
     .resto__cite{
       background: url("images_resto/resto-3-desktop.jpg") no-repeat;
+      @include position(absolute, $top:30em, $left:2vw);
     }
     .resto__folie{
       background: url("images_resto/resto-4-desktop.jpg") no-repeat;
+      @include position(absolute, $top:30em, $right:2vw);
     }
     .resto__menil__nouveau, .resto__charonne__nouveau{
-      @include position(relative, $top:0em, $left:20%);
+      @include position(relative, $top:-3em, $left:30%);
     }
     h4,p{
-      @include position($top:45em);
+      @include position($top:-8em);
     }
     .resto__menil,.resto__charonne{
       h4,p{
-        @include position($top:37em);
+        @include position($top:42em);
       }
+    }
+  }
+  footer{
+    @include position(absolute,$top:113em,$bottom:0, $left:0, $right:0);
+  }
+}
+
+@media screen and (min-width:1025px){
+  .resto{
+    div{
+      
+    }
+    .resto__menil{
+      background: url("images_resto/bg-palette.jpg") no-repeat;
+      background-size: contain;
+    }
+    .resto__charonne{
+      background: url("images_resto/bg-enchantée.jpg") no-repeat;
+      background-size: contain;
+    }
+    .resto__cite{
+      background: url("images_resto/bg-fr.jpg") no-repeat;
+    }
+    .resto__folie{
+      background: url("images_resto/resto-4-desktop.jpg") no-repeat;
     }
   }
 }

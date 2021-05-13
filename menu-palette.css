@@ -82,7 +82,7 @@ header {
 }
 
 header + div {
-  background: url("images_resto/bg-fr-mob.jpg") no-repeat;
+  background: url("images_resto/bg-française.jpg") no-repeat;
   height: 74vw;
   position: absolute;
   right: 0;
@@ -148,7 +148,7 @@ footer {
 
 @media screen and (min-width: 1025px) {
   header + div {
-    background: url("images_resto/bg-fr-desktop.jpg") no-repeat;
+    background: url("images_resto/bg-française.jpg") no-repeat;
     height: 35em;
     position: absolute;
     right: 0;

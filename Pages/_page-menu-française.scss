@@ -11,7 +11,7 @@ header{
   font-size:0.5em;
 }
 header + div{
-  background: url("images_resto/bg-fr-mob.jpg") no-repeat;
+  background: url("images_resto/bg-française.jpg") no-repeat;
   height: 74vw;
   @include position(absolute, $left:0, $right:0);
   background-size: contain;
@@ -71,7 +71,7 @@ footer{
 }
 @media screen and (min-width: 1025px){
   header + div{
-    background: url("images_resto/bg-fr-desktop.jpg") no-repeat;
+    background: url("images_resto/bg-française.jpg") no-repeat;
     height: 35em;
     @include position(absolute, $left:0, $right:0);
     background-size: cover;

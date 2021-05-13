@@ -220,7 +220,7 @@ h3 {
   color: #000;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   .fct {
     display: flex;
     flex-direction: column;
@@ -238,7 +238,7 @@ h3 {
     flex-direction: row;
   }
   .resto div {
-    height: 50em;
+    height: 25em;
     width: 45%;
     margin-top: 5em;
   }
@@ -255,81 +255,49 @@ h3 {
   .resto .resto__cite {
     background: url("images_resto/resto-3-desktop.jpg") no-repeat;
     position: absolute;
-    top: 55em;
+    top: 30em;
     left: 2vw;
   }
   .resto .resto__folie {
     background: url("images_resto/resto-4-desktop.jpg") no-repeat;
     position: absolute;
-    top: 55em;
+    top: 30em;
     right: 2vw;
   }
   .resto .resto__menil__nouveau, .resto .resto__charonne__nouveau {
     position: relative;
-    top: 0em;
+    top: -3em;
     left: 30%;
   }
   .resto h4, .resto p {
-    top: 45em;
+    top: -8em;
   }
   .resto .resto__menil h4, .resto .resto__menil p, .resto .resto__charonne h4, .resto .resto__charonne p {
-    top: 37em;
+    top: 42em;
   }
 
   footer {
     position: absolute;
-    top: 160em;
+    top: 113em;
     right: 0;
     bottom: 0;
     left: 0;
   }
 }
 @media screen and (min-width: 1025px) {
-  .fct, .resto {
-    display: flex;
-  }
-
-  .fct {
-    align-items: center;
-  }
-
-  .fct h3, .resto h3 {
-    position: absolute;
-    top: 0;
-    left: 3em;
-  }
-
-  .resto {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .resto div {
-    height: 50em;
-    width: 22%;
-    margin-top: 5em;
-  }
   .resto .resto__menil {
-    background: url("images_resto/resto-1-desktop.jpg") no-repeat;
+    background: url("images_resto/bg-palette.jpg") no-repeat;
+    background-size: contain;
   }
   .resto .resto__charonne {
-    background: url("images_resto/resto-2-desktop.jpg") no-repeat;
+    background: url("images_resto/bg-enchantée.jpg") no-repeat;
+    background-size: contain;
   }
   .resto .resto__cite {
-    background: url("images_resto/resto-3-desktop.jpg") no-repeat;
+    background: url("images_resto/bg-fr.jpg") no-repeat;
   }
   .resto .resto__folie {
     background: url("images_resto/resto-4-desktop.jpg") no-repeat;
-  }
-  .resto .resto__menil__nouveau, .resto .resto__charonne__nouveau {
-    position: relative;
-    top: 0em;
-    left: 20%;
-  }
-  .resto h4, .resto p {
-    top: 45em;
-  }
-  .resto .resto__menil h4, .resto .resto__menil p, .resto .resto__charonne h4, .resto .resto__charonne p {
-    top: 37em;
   }
 }
 /*remind: var; list; map*/
