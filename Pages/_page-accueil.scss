@@ -70,7 +70,7 @@ h3{
   height:70em;
   background-color: map-get($color, color2);
   padding-top:1em;
-  div{
+  .resto__menil,.resto__charonne,.resto__cite,.resto__folie{
     display:block;
     height:14.5em;
     width:18em;
@@ -91,15 +91,11 @@ h3{
     background: url("images_resto/resto-4.jpg") no-repeat;
   }
   h4,p{
-    @include position(relative, $left:0.5em);
+    @include position(relative, $left:0.5em,$top:11.5em);
     margin:0;
   }
   h4{
-    @include position($top:11.5em);
     font-weight: bold;
-  }
-  p{
-    @include position($top:11.5em);
   }
   .fa-heart{
     @include position(absolute, $right:1.5em);
@@ -107,11 +103,11 @@ h3{
   }
   .resto__menil,.resto__charonne{
     h4,p{
-      @include position($top:8.5em);
+      @include position($top:9em);
     }
   }
   .resto__menil__nouveau, .resto__charonne__nouveau{
-        @include position(relative,$top:1em, $left:4.5em);
+        @include position(relative,$top:1em, $left:10em);
         background-color: #99e2d0;
         color:darken(#99e2d0, 35%);
         font-size:1em;
@@ -138,7 +134,7 @@ h3{
   .resto{
     display: flex;
     flex-direction: row;
-    div{
+    .resto__menil,.resto__charonne,.resto__cite,.resto__folie{
       height:25em;
       width: 45%;
       margin-top: 5em;
@@ -160,14 +156,14 @@ h3{
       @include position(absolute, $top:30em, $right:2vw);
     }
     .resto__menil__nouveau, .resto__charonne__nouveau{
-      @include position(relative, $top:-3em, $left:30%);
+      @include position(relative, $top:2em, $left:65%);
     }
     h4,p{
       @include position($top:-8em);
     }
     .resto__menil,.resto__charonne{
       h4,p{
-        @include position($top:42em);
+        @include position($top:48em);
       }
     }
   }
@@ -179,21 +175,36 @@ h3{
 @media screen and (min-width:1025px){
   .resto{
     div{
-      
+      width:1500px;
+      margin:0 auto;
+      position: relative;
+    }
+    .resto__menil,.resto__charonne,.resto__cite,.resto__folie{
+      width:45%;
     }
     .resto__menil{
-      background: url("images_resto/bg-palette.jpg") no-repeat;
-      background-size: contain;
+      background: url("images_resto/resto1.jpg") no-repeat;
+      background-size: $bg-size;
     }
     .resto__charonne{
-      background: url("images_resto/bg-enchantée.jpg") no-repeat;
-      background-size: contain;
+      background: url("images_resto/resto2.jpg") no-repeat;
+      background-size: $bg-size;
     }
     .resto__cite{
-      background: url("images_resto/bg-fr.jpg") no-repeat;
+      background: url("images_resto/resto3.jpg") no-repeat;
+      background-size: $bg-size;
     }
     .resto__folie{
-      background: url("images_resto/resto-4-desktop.jpg") no-repeat;
+      background: url("images_resto/resto4.jpg") no-repeat;
+      background-size: $bg-size;
+    }
+    .resto__menil__nouveau, .resto__charonne__nouveau{
+      @include position(relative, $top:2em, $left:35%);
+    }
+    .resto__menil,.resto__charonne{
+      h4,p{
+        @include position($top:49.6em);
+      }
     }
   }
 }
