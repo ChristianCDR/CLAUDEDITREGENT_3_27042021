@@ -1,0 +1,27 @@
+@import "Base/fonts";
+@import "Base/body";
+@import "Utils/map";
+@import "Utils/variables";
+@import "Utils/list";
+@import "Utils/mixin";
+@import "Components/buttons";
+@import "Layouts/footer";
+@import "Pages/page-menu-française";
+header + div{
+  background: url("images_resto/bg-enchantée.jpg") no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width:1024px){
+  /*background*/
+  header + div{
+    background: url("images_resto/bg-ench-desktop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+    .main-section__container{
+    .plats p{
+      font-size: 1em;
+    }
+    /*couper la description*/
+  }
+}

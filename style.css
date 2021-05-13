@@ -183,27 +183,25 @@ h3 {
 .resto .resto__folie {
   background: url("images_resto/resto-4.jpg") no-repeat;
 }
-.resto p, .resto span {
+.resto h4, .resto p {
   position: relative;
   left: 0.5em;
+  margin: 0;
 }
-.resto p {
+.resto h4 {
   top: 11.5em;
   font-weight: bold;
 }
-.resto span {
-  top: 10.6em;
+.resto p {
+  top: 11.5em;
 }
 .resto .fa-heart {
   position: absolute;
   right: 1.5em;
   padding-top: 0.2em;
 }
-.resto .resto__menil p, .resto .resto__charonne p {
+.resto .resto__menil h4, .resto .resto__menil p, .resto .resto__charonne h4, .resto .resto__charonne p {
   top: 8.5em;
-}
-.resto .resto__menil span, .resto .resto__charonne span {
-  top: 7.6em;
 }
 .resto .resto__menil__nouveau, .resto .resto__charonne__nouveau {
   position: relative;
@@ -271,10 +269,10 @@ h3 {
     top: 0em;
     left: 30%;
   }
-  .resto p, .resto span {
-    top: 44em;
+  .resto h4, .resto p {
+    top: 45em;
   }
-  .resto .resto__menil p, .resto .resto__menil span, .resto .resto__charonne p, .resto .resto__charonne span {
+  .resto .resto__menil h4, .resto .resto__menil p, .resto .resto__charonne h4, .resto .resto__charonne p {
     top: 37em;
   }
 
@@ -327,10 +325,10 @@ h3 {
     top: 0em;
     left: 20%;
   }
-  .resto p, .resto span {
-    top: 44em;
+  .resto h4, .resto p {
+    top: 45em;
   }
-  .resto .resto__menil p, .resto .resto__menil span, .resto .resto__charonne p, .resto .resto__charonne span {
+  .resto .resto__menil h4, .resto .resto__menil p, .resto .resto__charonne h4, .resto .resto__charonne p {
     top: 37em;
   }
 }

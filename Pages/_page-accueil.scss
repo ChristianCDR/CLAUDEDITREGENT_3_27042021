@@ -90,26 +90,24 @@ h3{
   .resto__folie{
     background: url("images_resto/resto-4.jpg") no-repeat;
   }
-  p,span{
+  h4,p{
     @include position(relative, $left:0.5em);
+    margin:0;
   }
-  p{
+  h4{
     @include position($top:11.5em);
     font-weight: bold;
   }
-  span{
-    @include position($top:10.6em);
+  p{
+    @include position($top:11.5em);
   }
   .fa-heart{
     @include position(absolute, $right:1.5em);
     padding-top: 0.2em;
   }
   .resto__menil,.resto__charonne{
-    p{
+    h4,p{
       @include position($top:8.5em);
-    }
-    span{
-      @include position($top:7.6em);
     }
   }
   .resto__menil__nouveau, .resto__charonne__nouveau{
@@ -164,11 +162,11 @@ h3{
   .resto__menil__nouveau, .resto__charonne__nouveau{
     @include position(relative, $top:0em, $left:30%);
   }
-  p,span{
-    @include position($top:44em);
+  h4,p{
+    @include position($top:45em);
   }
   .resto__menil,.resto__charonne{
-    p,span{
+    h4,p{
       @include position($top:37em);
     }
   }
@@ -212,11 +210,11 @@ footer{
     .resto__menil__nouveau, .resto__charonne__nouveau{
       @include position(relative, $top:0em, $left:20%);
     }
-    p,span{
-      @include position($top:44em);
+    h4,p{
+      @include position($top:45em);
     }
     .resto__menil,.resto__charonne{
-      p,span{
+      h4,p{
         @include position($top:37em);
       }
     }

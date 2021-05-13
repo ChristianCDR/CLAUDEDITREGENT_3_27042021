@@ -198,5 +198,25 @@ footer {
     top: 32em;
   }
 }
+header + div {
+  background: url("images_resto/bg-enchantée.jpg") no-repeat;
+  background-size: cover;
+}
 
-/*# sourceMappingURL=menu-fran%C3%A7aise.css.map */
+@media screen and (min-width: 1024px) {
+  /*background*/
+  header + div {
+    background: url("images_resto/bg-ench-desktop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-section__container {
+    /*couper la description*/
+  }
+  .main-section__container .plats p {
+    font-size: 1em;
+  }
+}
+
+/*# sourceMappingURL=menu-enchant%C3%A9e.css.map */

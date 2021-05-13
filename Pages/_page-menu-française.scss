@@ -1,0 +1,115 @@
+body{
+  margin:auto;
+}
+header{
+  text-align: center;
+  font-size:1em;
+}
+.fa-arrow-left{
+  text-align:left;
+  @include position(absolute, $left:1em);
+  font-size:0.5em;
+}
+header + div{
+  background: url("images_resto/bg-fr-mob.jpg") no-repeat;
+  height: 74vw;
+  @include position(absolute, $left:0, $right:0);
+  background-size: contain;
+}
+.main-section{
+  @include position(relative,$top:55vw);
+  border-radius: 10vw 10vw 0 0;
+  background-color:map-get($color, color2);
+  font-size: 3.5vw;
+  height:auto;
+  padding-top:2em ;
+  padding-bottom: 3em;
+
+  h2, p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h2{
+    font-family: 'shrikhandregular',Arial, Helvetica, sans-serif;
+    padding:0 10% 0 5%;
+  }
+  .entrees div, .plats div, .desserts div{
+    width: 90%;
+    margin:20px auto;
+    padding:0.5% 0 5% 0;
+    border-radius: 0.7em;
+    background-color: map-get($color, clr);
+  }
+  h3{
+    margin-left: 5%;
+    width:12%;
+    border-bottom: 2px solid map-get($color, color4);;
+    text-transform: uppercase;
+  }
+  h4,span{
+    font-weight: bold;
+  }
+  h4,p{
+    padding:0 5%;
+    margin:0;
+  }
+  h4{
+    margin-top:1em;
+  }
+}
+button{
+display: block;
+height:12vw;
+margin:4em auto;
+width:50%;
+} 
+footer{
+  @include position(relative,$top:53vw);
+  padding-top: 1%;
+}
+@media screen and (min-width: 1025px){
+  header + div{
+    background: url("images_resto/bg-fr-desktop.jpg") no-repeat;
+    height: 35em;
+    @include position(absolute, $left:0, $right:0);
+    background-size: cover;
+    background-position: center;
+  }
+  .main-section{
+    max-width:1200px;
+    margin: 0 auto;
+    @include position(relative,$top:32em);
+    border-radius: 4em 4em 0 0;
+    font-size: 1em;
+    h2{
+      padding:0 1.5em 0 1em;
+    }
+  }
+  .main-section__container{
+    display: flex;
+    justify-content: space-around;
+    section{
+      width:40%;
+    }
+    div{
+      height:3.5em;
+    }
+    .plats p{
+      font-size: 95%;
+      span{
+        font-size: 1.1em;
+      }
+    }
+  }
+  button{
+    width:15em;
+    height:5em;
+    border-radius: 10em;
+    font-weight: bold;
+  }
+  footer{
+    @include position(relative,$top:32em);
+  }
+}
