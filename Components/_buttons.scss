@@ -1,9 +1,13 @@
 button{
-  background:linear-gradient(to top left,#9356dc, #FF79DA);
+  background: $btn-bg;
   height:18%;
   border-radius:2em;
   border:transparent;
   color: map-get($color, clr);
   font-size:1em;
+  font-weight: bold;
   box-shadow:$box-shadow;
+  :hover, :active{
+    color:green;
+  }
 }

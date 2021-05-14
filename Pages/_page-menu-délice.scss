@@ -1,0 +1,17 @@
+header + div{
+  background: url("images_resto/bg-délice.jpg") no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width:1024px){
+  header + div{
+    background: url("images_resto/bg-délice.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+    .main-section__container{
+    .plats p{
+      font-size: 1em;
+    }
+    /*couper la description*/
+  }
+}
