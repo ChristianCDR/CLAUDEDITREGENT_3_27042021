@@ -1,0 +1,5 @@
+@function lighter($first,$second,$percentage) {
+  $first-lighted: lighten($first,$percentage);
+  $second-lighted:lighten($second,$percentage);
+  @return linear-gradient(to top left,$first-lighted, $second-lighted);
+}

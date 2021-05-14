@@ -1,13 +1,15 @@
 button{
   background: $btn-bg;
   height:18%;
+  width:17em;
   border-radius:2em;
   border:transparent;
   color: map-get($color, clr);
   font-size:1em;
   font-weight: bold;
   box-shadow:$box-shadow;
-  :hover, :active{
-    color:green;
+  &:hover{
+    background: lighter(map-get($color, primary),map-get($color, secondary),5%);
+    box-shadow:$box-shadow-hover;
   }
 }
