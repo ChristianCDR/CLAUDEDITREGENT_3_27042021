@@ -26,6 +26,9 @@ h3{
     border:none;
     background-color: map-get($color, color3);
   }
+  form{
+    margin-left: 3em;
+  }
   .fa-map-marker-alt{
     margin-right: 1em;
   } 

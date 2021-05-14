@@ -105,6 +105,9 @@ h3 {
   border: none;
   background-color: #eaeaea;
 }
+.reserv form {
+  margin-left: 3em;
+}
 .reserv .fa-map-marker-alt {
   margin-right: 1em;
 }
