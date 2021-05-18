@@ -63,9 +63,32 @@ button:hover {
   background-clip: text;
   opacity: 0;
 }
-.far:hover .fas {
+.far:hover .fas, .far:active .fas {
   opacity: 1;
   transform: scale(1);
+}
+
+@keyframes apparition {
+  from {
+    transform-origin: center;
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.entrees {
+  animation: apparition 700ms both;
+}
+
+.plats {
+  animation: apparition 700ms 500ms both;
+}
+
+.desserts {
+  animation: apparition 700ms 800ms both;
 }
 
 footer {
