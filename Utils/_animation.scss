@@ -1,3 +1,39 @@
+@keyframes wrapper{
+  to{
+    opacity: 0;
+  }
+}
+@keyframes spinner{
+to{
+  transform: rotate(360deg);
+  opacity: 1;
+}
+}
+body{
+&::before{
+  display:block;
+  content:"";
+  @include position(absolute, $top:0, $bottom:0 ,$left:0, $right:0);
+  width:auto;
+  height: auto;
+  background: map-get($color, color2);
+  z-index: 1;
+  animation: wrapper 3000ms forwards;
+}
+&::after{
+  display:block;
+  content:"";
+  width: 5em;
+  height:5em;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-top:map-get($color, primary) 10px solid;
+  border-bottom:map-get($color, secondary) 10px solid;
+  animation: spinner 1500ms backwards;
+  opacity:0;
+  margin: 50vh auto;
+}
+}
 .far{
   @include position(absolute, $right:1.5em);
   padding-top: 0.2em;
