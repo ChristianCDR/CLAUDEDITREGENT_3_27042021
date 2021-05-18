@@ -3,7 +3,7 @@
   padding-top: 0.2em;
   z-index: 1;
   .fas{
-    padding-top: 0.2em;
+    padding-top: 0.25em;
     content: "ok";
     @include position(absolute, $right:0, $left:0, $top:0, $bottom:0);
     z-index: -1;
@@ -34,14 +34,14 @@
   }
 }
   .entrees{
-    animation: apparition 700ms both;
+    animation: apparition $duration both $cubic-bezier;
 
   }
   .plats{
-    animation: apparition 700ms 500ms both;
+    animation: apparition $duration 500ms both $cubic-bezier;
   }
   .desserts{
-    animation: apparition 700ms 800ms both;
+    animation: apparition $duration 800ms both $cubic-bezier;
   }
 
 

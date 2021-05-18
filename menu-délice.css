@@ -48,7 +48,7 @@ button:hover {
   z-index: 1;
 }
 .far .fas {
-  padding-top: 0.2em;
+  padding-top: 0.25em;
   content: "ok";
   position: absolute;
   top: 0;
@@ -80,15 +80,15 @@ button:hover {
   }
 }
 .entrees {
-  animation: apparition 700ms both;
+  animation: apparition 700ms both cubic-bezier(0.14, -0.43, 0.46, 1.35);
 }
 
 .plats {
-  animation: apparition 700ms 500ms both;
+  animation: apparition 700ms 500ms both cubic-bezier(0.14, -0.43, 0.46, 1.35);
 }
 
 .desserts {
-  animation: apparition 700ms 800ms both;
+  animation: apparition 700ms 800ms both cubic-bezier(0.14, -0.43, 0.46, 1.35);
 }
 
 footer {
