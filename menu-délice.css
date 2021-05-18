@@ -41,6 +41,33 @@ button:hover {
   box-shadow: 0 2px 10px #000;
 }
 
+.far {
+  position: absolute;
+  right: 1.5em;
+  padding-top: 0.2em;
+  z-index: 1;
+}
+.far .fas {
+  padding-top: 0.2em;
+  content: "ok";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 400ms;
+  transform: scale(0);
+  color: transparent;
+  background: linear-gradient(to top left, #9356dc, #FF79DA);
+  background-clip: text;
+  opacity: 0;
+}
+.far:hover .fas {
+  opacity: 1;
+  transform: scale(1);
+}
+
 footer {
   height: 10em;
   background-color: #353535;

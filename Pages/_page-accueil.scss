@@ -111,10 +111,6 @@ h3{
   h4{
     font-weight: bold;
   }
-  .fa-heart{
-    @include position(absolute, $right:1.5em);
-    padding-top: 0.2em;
-  }
   .resto__menil,.resto__charonne{
     h4,p{
       @include position($top:9em);
