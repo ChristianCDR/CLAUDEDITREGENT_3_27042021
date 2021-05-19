@@ -86,7 +86,6 @@ button:hover {
 }
 .far .fas {
   padding-top: 0.25em;
-  content: "";
   position: absolute;
   top: 0;
   right: 0;
