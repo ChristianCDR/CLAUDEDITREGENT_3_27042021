@@ -44,11 +44,12 @@ button:hover {
 @keyframes wrapper {
   to {
     opacity: 0;
+    z-index: 0;
   }
 }
 @keyframes spinner {
   to {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
     opacity: 1;
   }
 }
@@ -64,7 +65,7 @@ body::before {
   height: auto;
   background: #f6f6f6;
   z-index: 1;
-  animation: wrapper 3000ms forwards;
+  animation: wrapper 7s forwards;
 }
 body::after {
   display: block;
@@ -75,9 +76,9 @@ body::after {
   border: 10px solid white;
   border-top: #9356dc 10px solid;
   border-bottom: #FF79DA 10px solid;
-  animation: spinner 1500ms backwards;
+  animation: spinner 3s ease-in-out backwards;
   opacity: 0;
-  margin: 50vh auto;
+  margin: 51vh auto;
 }
 
 .far {
@@ -130,6 +131,60 @@ body::after {
   animation: apparition 700ms 800ms both cubic-bezier(0.14, -0.43, 0.46, 1.35);
 }
 
+.main-section__container div {
+  position: relative;
+}
+.main-section__container div::after {
+  display: block;
+  content: "";
+  width: 5em;
+  height: 5em;
+  border-radius: 0 0.7em 0.7em 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #99E2D0;
+  animation: choosing-menu 500ms;
+  z-index: 0;
+}
+.main-section__container div .fa-check-circle {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  color: white;
+  font-size: 1.5em;
+  animation: spinner reverse 1000ms, choosing-menu 100ms;
+}
+@keyframes choosing-menu {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/*.main-section__container div{
+  position: relative;
+  &::after{
+    display: block;
+    content:"";
+    width: 5em;
+    height: 5em;
+    border-radius: 0 0.7em 0.7em 0;
+    @include position(absolute, $right:0, $top:0);
+    border: 1px solid black;
+  }
+
+   &::before{
+    font-family: "Font Awesome 5 Free";
+    content:"\f058";
+    width:4em;
+    border:1px solid red;
+    @include position(absolute, $right:0, $top:40%);
+
+  }*/
 footer {
   height: 10em;
   background-color: #353535;
@@ -186,6 +241,10 @@ header + div {
   background-size: contain;
 }
 
+.fa-check-circle {
+  visibility: hidden;
+}
+
 .main-section {
   position: relative;
   top: 55vw;
@@ -207,6 +266,7 @@ header + div {
 }
 .main-section .entrees div, .main-section .plats div, .main-section .desserts div {
   width: 90%;
+  height: 3.5em;
   margin: 20px auto;
   padding: 0.5% 0 5% 0;
   border-radius: 0.7em;
