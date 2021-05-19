@@ -82,38 +82,48 @@ body{
   }
   .main-section__container div{
     position: relative;
-  
+    box-shadow: $box-shadow;
+    /*white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; */
+    &:hover{
       &::after{
         display: block;
         content:"";
-        width: 5em;
+        width: 1em;
         height: 5em;
         border-radius: 0 0.7em 0.7em 0;
         @include position(absolute, $right:0, $top:0);
         background: map-get($color, tertiaire);
-        animation: choosing-menu 500ms;
-        z-index: 0;
+        animation: choosing-menu ease-in-out 300ms both;
       }
-    
+    } 
+    @keyframes choosing-menu{
+      to{
+        width:5em;
+      }
+    } 
+    @keyframes spin{
+      from{
+        transform:translateX(20px) rotate(180deg);
+      }
+      to{
+        transform:translateX(-25px) rotate(360deg);
+      }
+    }
+    &:hover{
       .fa-check-circle{
         visibility: visible;
-        @include position(absolute, $right:0, $top:0);
+        @include position(absolute, $right:0, $top:1em);
         z-index:1;
         color:white;
         font-size: 1.5em;
-        animation: spinner reverse 1000ms, choosing-menu 100ms;
+        animation: spin 500ms both;
       } 
-    &:hover{ 
+    
     }
   }
-  @keyframes choosing-menu{
-    from{
-      transform: translateX(20px);
-    }
-    to{
-      transform: translateX(0);
-    }
-  }  
+ 
   /*.main-section__container div{
     position: relative;
     &::after{
