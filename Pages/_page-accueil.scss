@@ -1,3 +1,29 @@
+body{
+  &::before{
+    display:block;
+    content:"";
+    @include position(absolute, $top:0, $bottom:0 ,$left:0, $right:0);
+    width:auto;
+    height: auto;
+    background: map-get($color, color2);
+    z-index: 1;
+    animation: wrapper 5s 3s forwards;
+    opacity: 0.7;
+  }
+  &::after{
+    display:block;
+    content:"";
+    width: 10em;
+    height:10em;
+    border-radius: 50%;
+    border: 10px solid white;
+    border-top:map-get($color, primary) 10px solid;
+    border-bottom:map-get($color, secondary) 10px solid;
+    animation: spinner 7s ease-in-out forwards;
+    opacity:1;
+    margin:auto;
+  }
+  }
 body a{
     color:map-get($color, color5);
 }
