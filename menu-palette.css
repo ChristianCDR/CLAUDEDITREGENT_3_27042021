@@ -86,7 +86,7 @@ button:hover {
 }
 .far .fas {
   padding-top: 0.25em;
-  content: "ok";
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -152,6 +152,7 @@ Ameliorer choosing-menu
 rogner la description
 Pwp
 fas sur github
+opacity sur les boutons
 */
 footer {
   height: 10em;

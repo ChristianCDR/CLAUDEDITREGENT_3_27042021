@@ -255,7 +255,7 @@ footer {
 }
 .far .fas {
   padding-top: 0.25em;
-  content: "ok";
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -321,6 +321,7 @@ Ameliorer choosing-menu
 rogner la description
 Pwp
 fas sur github
+opacity sur les boutons
 */
 
 /*# sourceMappingURL=menu-fran%C3%A7aise.css.map */

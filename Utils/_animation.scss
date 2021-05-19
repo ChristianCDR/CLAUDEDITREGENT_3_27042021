@@ -40,7 +40,7 @@ to{
   z-index: 1;
   .fas{
     padding-top: 0.25em;
-    content: "ok";
+    content: "";
     @include position(absolute, $right:0, $left:0, $top:0, $bottom:0);
     z-index: -1;
     transition: all 400ms;
@@ -101,4 +101,5 @@ to{
  rogner la description
  Pwp
  fas sur github
+ opacity sur les boutons
  */
