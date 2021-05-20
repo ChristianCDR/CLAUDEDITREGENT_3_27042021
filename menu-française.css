@@ -257,7 +257,11 @@ footer {
 }
 .far .fas.fa-heart {
   padding-top: 0.25em;
-  /* @include position(absolute, $right:0, $left:0, $top:0, $bottom:0);*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -1;
   color: transparent;
   background: linear-gradient(to top left, #9356dc, #FF79DA);
