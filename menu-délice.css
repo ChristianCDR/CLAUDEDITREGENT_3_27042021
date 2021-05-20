@@ -137,15 +137,15 @@ button:hover {
   transform-origin: right;
 }
 .main-section__container div .fa-check-circle {
-  visibility: visible;
+  visibility: hidden;
   position: absolute;
   top: 1em;
   right: 1vw;
   z-index: 1;
   color: white;
   font-size: 1.5em;
-  transition-duration: 700ms;
-  transform: translateX(20px) rotate(180deg);
+  transition-duration: 300ms;
+  transform: translateX(10px) rotate(180deg);
 }
 .main-section__container div:hover::after {
   display: block;
@@ -153,9 +153,9 @@ button:hover {
   width: 5em;
   border-radius: 0 0.7em 0.7em 0;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
   background: #99E2D0;
   transition: transform 400ms;
   transform: scalex(1);
@@ -163,13 +163,13 @@ button:hover {
 .main-section__container div:hover .fa-check-circle {
   visibility: visible;
   position: absolute;
-  top: 1em;
+  top: 1.2em;
   right: 1vw;
   z-index: 1;
   color: white;
   font-size: 1.5em;
   transition-duration: 700ms;
-  transform: translateX(-25px) rotate(360deg);
+  transform: translateX(-75%) rotate(360deg);
 }
 .main-section__container div:hover span {
   animation: price-move 400ms both;
