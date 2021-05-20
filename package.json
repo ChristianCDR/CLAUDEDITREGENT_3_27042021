@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch main.scss:style.css menu-française.scss:menu-française.css menu-enchantée.scss:menu-enchantée.css menu-palette.scss:menu-palette.css menu-délice.scss:menu-délice.css"
-   
+    "sass": "sass --watch main.scss:style.css menu-française.scss:menu-française.css menu-enchantée.scss:menu-enchantée.css menu-palette.scss:menu-palette.css menu-délice.scss:menu-délice.css",
+    "prefix":"postcss style.css --use autoprefixer -d prefixed"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist":"last 4 versions"
 }
