@@ -13,19 +13,43 @@
       background-clip: text;
     }
     div{
-      width: 7em;
-      border: 3px solid green;
-      margin:auto;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      width:10em;
+      height:5em;
+      margin: auto;
+      background: cyan;
+      
     }
+    div:hover{
+      width:10em;
+      height:5em;
+      margin: auto;
+      background: cyan;
+      animation: div 2s both, div2 2s both paused,div3 2s both paused;
+    }
+    @keyframes div{
+        to{
+          transform: scalex(2);
+          animation-play-state: paused;
+        }
+    }
+    @keyframes div2{
+        100%{
+          transform: scalex(1);
+        }
+    }
+    @keyframes div3{
+        100%{
+          transform: scalex(1);
+        }
+    }
+    
+
   </style>
 </head>
 <body>
   <i class="fas fa-heart"></i>
   <div>
-    azertyuiopqsdfghjklmwxcvbn
+  
   </div>
   <script src="https://kit.fontawesome.com/b9c19694fb.js" crossorigin="anonymous"></script>
 </body>

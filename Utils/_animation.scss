@@ -11,8 +11,11 @@ to{
 }
 }
 @keyframes choosing-menu{
+  from{
+    transform: scaleX(0);
+  }
   to{
-    width:5em; /*à revoir*/
+    transform: scaleX(1);
   }
 } 
 @keyframes spin{
@@ -34,11 +37,19 @@ to{
     opacity: 1;
   }
 }
+@keyframes price-move{
+  from{
+    transform: translate(0);
+  }
+  to{
+    transform: translate(-5em);
+  }
+}
 .far{
   @include position(absolute, $right:1.5em);
   padding-top: 0.2em;
   z-index: 1;
-  .fas.fa-heart{
+  .fas{
     padding-top: 0.25em;
     @include position(absolute, $right:0, $left:0, $top:0, $bottom:0);
     z-index: -1;
@@ -50,7 +61,7 @@ to{
     opacity: 0;
   }
   &:hover, &:active{
-    .fas.fas.fa-heart{
+    .fas{
       opacity:1;
       transform: scale(1);
     }
@@ -69,51 +80,67 @@ to{
   .main-section__container div{
     position: relative;
     box-shadow: $box-shadow;
-    span{
-      transition: transform 400ms;
-      transform: translate(0);
-    }
     p{
-      transition: transform 500ms;
-      transform: scalex(1);
-      border:1px solid green;
       width: 85%;
+      transition: 500ms;
       @include ellipsis;
     }
     &:hover{
       &::after{
         display: block;
         content:"";
-        width: 1em;
-        height: 4.9em;
+        width: 5em;
         border-radius: 0 0.7em 0.7em 0;
-        @include position(absolute, $right:0, $top:0);
+        @include position(absolute, $right:0, $top:0,$bottom:0, );
         background: map-get($color, tertiaire);
+        transform-origin: right;
         animation: choosing-menu ease-in-out 300ms both;
       }
       .fa-check-circle{
         visibility: visible;
-        @include position(absolute, $right:0, $top:1em);
+        @include position(absolute, $right:1vw, $top:1em);
         z-index:1;
         color:white;
         font-size: 1.5em;
         animation: spin 500ms both;
       } 
       span{
-        transform: translate(-5em);
-      } 
+        animation: price-move 400ms both;
+      }
       p{
-        /*transform:scalex(0.5);*/
         width: 70%;
         @include ellipsis;
       }
     }
+    :not(:hover){
+      &::after{
+        display: block;
+        content:"";
+        width: 5em;
+        border-radius: 0 0.7em 0.7em 0;
+        @include position(absolute, $right:0, $top:0,$bottom:0, );
+        background: map-get($color, tertiaire);
+        transform-origin: right;
+        animation: choosing-menu ease-in-out reverse 500ms both;
+      }
+      .fa-check-circle{
+        visibility: visible;
+        @include position(absolute, $right:1vw, $top:1em);
+        z-index:1;
+        color:red;
+        font-size: 1.5em;
+        animation: spin 500ms both reverse;
+      } 
+      p{
+        width: 70%;
+        @include ellipsis;
+      }
+    }
+    
   }
  /*
- Ameliorer choosing-menu
- opacity sur les boutons
- rogner la description
- 
- fas sur github
+ position du check
+ retour en arriere de choosing-menu
+ fas sur github - autoprefixer
  Pwp
  */

@@ -8,6 +8,7 @@ button{
   font-size:1em;
   font-weight: bold;
   box-shadow:$box-shadow;
+  transition-duration: 400ms;
   &:hover{
     background: lighter(map-get($color, primary),map-get($color, secondary),5%);
     box-shadow:$box-shadow-hover;
