@@ -86,11 +86,6 @@ button:hover {
 }
 .far .fas {
   padding-top: 0.25em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   z-index: -1;
   transition: all 400ms;
   transform: scale(0);
@@ -169,8 +164,9 @@ button:hover {
 /*
 Ameliorer choosing-menu
 opacity sur les boutons
-fas sur github
 rogner la description
+
+fas sur github
 Pwp
 */
 footer {
