@@ -23,7 +23,7 @@ body{
     opacity:1;
     margin:auto;
   }
-  }
+}
 body a{
     color:map-get($color, color5);
 }
@@ -192,11 +192,11 @@ h3{
       @include position(relative, $top:2em, $left:65%);
     }
     h4,p{
-      @include position($top:-8em);
+      @include position($top:22em);
     }
     .resto__menil,.resto__charonne{
       h4,p{
-        @include position($top:48em);
+        @include position($top:20em);
       }
     }
   }
@@ -237,11 +237,6 @@ h3{
     }
     .resto__menil__nouveau, .resto__charonne__nouveau{
       @include position(relative, $top:2em, $left:35%);
-    }
-    .resto__menil,.resto__charonne{
-      h4,p{
-        @include position($top:49.6em);
-      }
     }
   }
 }

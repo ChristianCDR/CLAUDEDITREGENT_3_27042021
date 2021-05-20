@@ -111,14 +111,13 @@ header + div {
   padding-top: 2em;
   padding-bottom: 3em;
 }
-.main-section h2, .main-section p {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.main-section p {
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-top: 5px;
 }
-.main-section h2 {
-  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
-  padding: 0 10% 0 5%;
+.main-section span {
+  margin-top: 7px;
 }
 .main-section .entrees div, .main-section .plats div, .main-section .desserts div {
   width: 90%;
@@ -127,6 +126,15 @@ header + div {
   padding: 0.5% 0 5% 0;
   border-radius: 0.7em;
   background-color: #fff;
+}
+.main-section h2 {
+  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+  padding: 0 10% 0 5%;
+}
+.main-section h2, .main-section h5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .main-section h3 {
   margin-left: 5%;
@@ -137,7 +145,7 @@ header + div {
 .main-section h4, .main-section span {
   font-weight: bold;
 }
-.main-section h4, .main-section p {
+.main-section h4, .main-section h5 {
   padding: 0 5%;
   margin: 0;
 }
@@ -190,12 +198,6 @@ footer {
   }
   .main-section__container div {
     height: 3.5em;
-  }
-  .main-section__container .plats p {
-    font-size: 95%;
-  }
-  .main-section__container .plats p span {
-    font-size: 1.1em;
   }
 
   button {
@@ -288,9 +290,19 @@ footer {
 .main-section__container div {
   position: relative;
   box-shadow: 0 2px 10px #7f8182;
-  /*white-space: nowrap;
+}
+.main-section__container div span {
+  transition: transform 400ms;
+  transform: translate(0);
+}
+.main-section__container div p {
+  transition: transform 500ms;
+  transform: scalex(1);
+  border: 1px solid green;
+  width: 85%;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; */
 }
 .main-section__container div:hover::after {
   display: block;
@@ -314,13 +326,23 @@ footer {
   font-size: 1.5em;
   animation: spin 500ms both;
 }
+.main-section__container div:hover span {
+  transform: translate(-5em);
+}
+.main-section__container div:hover p {
+  /*transform:scalex(0.5);*/
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 /*
 Ameliorer choosing-menu
+opacity sur les boutons
+fas sur github
 rogner la description
 Pwp
-fas sur github
-opacity sur les boutons
 */
 
 /*# sourceMappingURL=menu-fran%C3%A7aise.css.map */

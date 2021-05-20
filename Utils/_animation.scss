@@ -69,9 +69,17 @@ to{
   .main-section__container div{
     position: relative;
     box-shadow: $box-shadow;
-    /*white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden; */
+    span{
+      transition: transform 400ms;
+      transform: translate(0);
+    }
+    p{
+      transition: transform 500ms;
+      transform: scalex(1);
+      border:1px solid green;
+      width: 85%;
+      @include ellipsis;
+    }
     &:hover{
       &::after{
         display: block;
@@ -83,8 +91,6 @@ to{
         background: map-get($color, tertiaire);
         animation: choosing-menu ease-in-out 300ms both;
       }
-    } 
-    &:hover{
       .fa-check-circle{
         visibility: visible;
         @include position(absolute, $right:0, $top:1em);
@@ -93,12 +99,20 @@ to{
         font-size: 1.5em;
         animation: spin 500ms both;
       } 
+      span{
+        transform: translate(-5em);
+      } 
+      p{
+        /*transform:scalex(0.5);*/
+        width: 70%;
+        @include ellipsis;
+      }
     }
   }
  /*
  Ameliorer choosing-menu
+ opacity sur les boutons
+ fas sur github
  rogner la description
  Pwp
- fas sur github
- opacity sur les boutons
  */
