@@ -38,18 +38,19 @@ to{
   @include position(absolute, $right:1.5em);
   padding-top: 0.2em;
   z-index: 1;
-  .fas{
+  .fas.fa-heart{
     padding-top: 0.25em;
+   /* @include position(absolute, $right:0, $left:0, $top:0, $bottom:0);*/
     z-index: -1;
-    transition: all 400ms;
-    transform: scale(0);
     color:transparent;
     background:$btn-bg;
     background-clip: text;
+    transition: all 400ms;
+    transform: scale(0);
     opacity: 0;
   }
   &:hover, &:active{
-    .fas{
+    .fas.fas.fa-heart{
       opacity:1;
       transform: scale(1);
     }

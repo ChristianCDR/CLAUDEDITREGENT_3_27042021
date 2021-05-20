@@ -255,17 +255,18 @@ footer {
   padding-top: 0.2em;
   z-index: 1;
 }
-.far .fas {
+.far .fas.fa-heart {
   padding-top: 0.25em;
+  /* @include position(absolute, $right:0, $left:0, $top:0, $bottom:0);*/
   z-index: -1;
-  transition: all 400ms;
-  transform: scale(0);
   color: transparent;
   background: linear-gradient(to top left, #9356dc, #FF79DA);
   background-clip: text;
+  transition: all 400ms;
+  transform: scale(0);
   opacity: 0;
 }
-.far:hover .fas, .far:active .fas {
+.far:hover .fas.fas.fa-heart, .far:active .fas.fas.fa-heart {
   opacity: 1;
   transform: scale(1);
 }
