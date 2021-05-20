@@ -225,22 +225,6 @@ footer {
     opacity: 0;
   }
 }
-@keyframes choosing-menu {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-@keyframes spin {
-  from {
-    transform: translateX(20px) rotate(180deg);
-  }
-  to {
-    transform: translateX(-25px) rotate(360deg);
-  }
-}
 @keyframes apparition {
   from {
     transform-origin: center;
@@ -309,6 +293,31 @@ footer {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.main-section__container div::after {
+  display: block;
+  content: "";
+  width: 5em;
+  border-radius: 0 0.7em 0.7em 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #99E2D0;
+  transform: scalex(0);
+  transition-duration: 400ms;
+  transform-origin: right;
+}
+.main-section__container div .fa-check-circle {
+  visibility: visible;
+  position: absolute;
+  top: 1em;
+  right: 1vw;
+  z-index: 1;
+  color: white;
+  font-size: 1.5em;
+  transition-duration: 700ms;
+  transform: translateX(20px) rotate(180deg);
+}
 .main-section__container div:hover::after {
   display: block;
   content: "";
@@ -319,8 +328,8 @@ footer {
   right: 0;
   bottom: 0;
   background: #99E2D0;
-  transform-origin: right;
-  animation: choosing-menu ease-in-out 300ms both;
+  transition: transform 400ms;
+  transform: scalex(1);
 }
 .main-section__container div:hover .fa-check-circle {
   visibility: visible;
@@ -330,7 +339,8 @@ footer {
   z-index: 1;
   color: white;
   font-size: 1.5em;
-  animation: spin 500ms both;
+  transition-duration: 700ms;
+  transform: translateX(-25px) rotate(360deg);
 }
 .main-section__container div:hover span {
   animation: price-move 400ms both;
@@ -341,39 +351,9 @@ footer {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main-section__container div :not(:hover)::after {
-  display: block;
-  content: "";
-  width: 5em;
-  border-radius: 0 0.7em 0.7em 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #99E2D0;
-  transform-origin: right;
-  animation: choosing-menu ease-in-out reverse 500ms both;
-}
-.main-section__container div :not(:hover) .fa-check-circle {
-  visibility: visible;
-  position: absolute;
-  top: 1em;
-  right: 1vw;
-  z-index: 1;
-  color: red;
-  font-size: 1.5em;
-  animation: spin 500ms both reverse;
-}
-.main-section__container div :not(:hover) p {
-  width: 70%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 
 /*
 position du check
-retour en arriere de choosing-menu
 fas sur github - autoprefixer
 Pwp
 */
