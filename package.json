@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch sass/main.scss:prefixed/style.css sass/menu-française.scss:prefixed/menu-française.css sass/menu-enchantée.scss:prefixed/menu-enchantée.css sass/menu-palette.scss:prefixed/menu-palette.css sass/menu-délice.scss:prefixed/menu-délice.css",
-    "prefix":"postcss css/style.css css/menu-palette.css css/menu-française.css css/menu-enchantée.css css/menu-délice.css --use autoprefixer -d prefixed"
+    "prefix":"postcss prefixed/style.css prefixed/menu-palette.css prefixed/menu-française.css prefixed/menu-enchantée.css prefixed/menu-délice.css --use autoprefixer -d prefixed"
     
   },
   "author": "",
