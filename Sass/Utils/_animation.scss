@@ -21,14 +21,6 @@
     opacity: 1;
   }
 }
-@keyframes price-move{
-  from{
-    transform: translate(0);
-  }
-  to{
-    transform: translate(-5em);
-  }
-}
 .far{
   @include position(absolute, $right:1.5em);
   padding-top: 0.2em;
@@ -67,6 +59,10 @@
       width: 85%;
       transition: 500ms;
       @include ellipsis;
+    }
+    span{
+     transition: transform 400ms;
+     transform: translate(0);
     }
     &::after{
       display: block;
@@ -109,7 +105,8 @@
         transform:translateX(-75%) rotate(360deg);
       } 
       span{
-        animation: price-move 400ms both;
+        transition: transform 400ms;
+        transform: translate(-5em);
       }
       p{
         width: 70%;

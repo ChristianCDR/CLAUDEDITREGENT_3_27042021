@@ -70,14 +70,6 @@ form button {
     opacity: 1;
   }
 }
-@keyframes price-move {
-  from {
-    transform: translate(0);
-  }
-  to {
-    transform: translate(-5em);
-  }
-}
 .far {
   position: absolute;
   right: 1.5em;
@@ -126,6 +118,10 @@ form button {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.main-section__container div span {
+  transition: transform 400ms;
+  transform: translate(0);
 }
 .main-section__container div::after {
   display: block;
@@ -177,7 +173,8 @@ form button {
   transform: translateX(-75%) rotate(360deg);
 }
 .main-section__container div:hover span {
-  animation: price-move 400ms both;
+  transition: transform 400ms;
+  transform: translate(-5em);
 }
 .main-section__container div:hover p {
   width: 70%;
