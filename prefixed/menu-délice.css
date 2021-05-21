@@ -181,10 +181,6 @@ button:hover {
   text-overflow: ellipsis;
 }
 
-/*
-fas sur github - autoprefixer
-Pwp
-*/
 footer {
   height: 10em;
   background-color: #353535;
