@@ -27,7 +27,7 @@ body{
 body a{
     color:map-get($color, color5);
 }
-button a, ul a{
+button, ul a{
   color:map-get($color, clr);
 }
 header,.reserv{

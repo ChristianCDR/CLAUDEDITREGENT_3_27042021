@@ -39,7 +39,7 @@
     z-index: -1;
     color:transparent;
     background:$btn-bg;
-    background-clip: text;
+    -webkit-background-clip: text;
     transition: all 400ms;
     transform: scale(0);
     opacity: 0;
