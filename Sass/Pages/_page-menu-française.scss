@@ -49,10 +49,20 @@ header + div{
     font-family: 'shrikhandregular',Arial, Helvetica, sans-serif;
     padding:0 10% 0 5%;
   }
-  h2, h5{
+  h2, h4+div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  h4+div{
+    box-shadow: none;
+    max-height:0.3em;
+    align-items: flex-start;
+    @include position(absolute,$top:20%, $left:0, $right:0);
+    border-radius:0.7em; 
+  }
+  .main-section__container h4+div{
+    background-color:transparent;
   }
   h3{
     margin-left: 5%;

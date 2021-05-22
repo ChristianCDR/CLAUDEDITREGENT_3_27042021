@@ -64,6 +64,7 @@
      transition: transform 400ms;
      transform: translate(0);
     }
+    
     &::after{
       display: block;
       content:"";
@@ -106,11 +107,19 @@
       } 
       span{
         transition: transform 400ms;
-        transform: translate(-5em);
+        transform: translate(-4em);
       }
-      p{
-        width: 70%;
-        @include ellipsis;
+      /*-----------------------------------------------*/
+      h4+div{
+        transform: translate(0);
+        &::after{
+        transform: scalex(0);
+        }
+        p{
+          width: 65%;
+          @include ellipsis;
+        }
       }
+      /*-----------------------------------------------*/
     } 
   }

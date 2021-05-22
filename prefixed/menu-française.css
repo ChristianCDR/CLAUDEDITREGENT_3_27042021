@@ -137,10 +137,23 @@ header + div {
   font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
   padding: 0 10% 0 5%;
 }
-.main-section h2, .main-section h5 {
+.main-section h2, .main-section h4 + div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.main-section h4 + div {
+  box-shadow: none;
+  max-height: 0.3em;
+  align-items: flex-start;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  border-radius: 0.7em;
+}
+.main-section .main-section__container h4 + div {
+  background-color: transparent;
 }
 .main-section h3 {
   margin-left: 5%;
@@ -319,6 +332,10 @@ footer {
   transition-duration: 300ms;
   transform: translateX(10px) rotate(180deg);
 }
+.main-section__container div:hover {
+  /*-----------------------------------------------*/
+  /*-----------------------------------------------*/
+}
 .main-section__container div:hover::after {
   display: block;
   content: "";
@@ -345,10 +362,16 @@ footer {
 }
 .main-section__container div:hover span {
   transition: transform 400ms;
-  transform: translate(-5em);
+  transform: translate(-4em);
 }
-.main-section__container div:hover p {
-  width: 70%;
+.main-section__container div:hover h4 + div {
+  transform: translate(0);
+}
+.main-section__container div:hover h4 + div::after {
+  transform: scalex(0);
+}
+.main-section__container div:hover h4 + div p {
+  width: 65%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

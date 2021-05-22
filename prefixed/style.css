@@ -148,6 +148,10 @@ form button {
   transition-duration: 300ms;
   transform: translateX(10px) rotate(180deg);
 }
+.main-section__container div:hover {
+  /*-----------------------------------------------*/
+  /*-----------------------------------------------*/
+}
 .main-section__container div:hover::after {
   display: block;
   content: "";
@@ -174,10 +178,16 @@ form button {
 }
 .main-section__container div:hover span {
   transition: transform 400ms;
-  transform: translate(-5em);
+  transform: translate(-4em);
 }
-.main-section__container div:hover p {
-  width: 70%;
+.main-section__container div:hover h4 + div {
+  transform: translate(0);
+}
+.main-section__container div:hover h4 + div::after {
+  transform: scalex(0);
+}
+.main-section__container div:hover h4 + div p {
+  width: 65%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
